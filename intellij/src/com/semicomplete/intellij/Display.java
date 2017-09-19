@@ -1,7 +1,6 @@
 package com.semicomplete.intellij;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -29,17 +28,6 @@ public class Display {
         public String toJSON() {
             return String.format("{ \"led\": %d, \"red\": %d, \"green\": %d, \"blue\": %d, \"white\": %d }", led, red, green, blue, white);
         }
-    }
-
-    static void setLEDColor(int led, int red, int green, int blue, int white) {
-        red &= 255;
-        green &= 255;
-        blue &= 255;
-        white &= 255;
-
-        String payload = String.format("{ \"led\": %d, \"red\": %d, \"green\": %d, \"blue\": %d, \"white\": %d }", led, red, green, blue, white);
-
-        send("NeoPixel.SetPixelColor", payload);
     }
 
     static void send(String rpcName, String payload) {
