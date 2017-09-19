@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include "mgos.h"
-#include "iterator.h"
+#include "mgos_iterator.h"
 #include "mgos_timers.h"
 
 struct mgos_iterator_ctx {
@@ -47,7 +47,7 @@ void mgos_iterator_count_next(void *arg) {
   ctx->current += 1;
 }
 
-void mgos_iterator_count_clear(mgos_iterator_count_id arg) {
+void mgos_clear_iterator_count(mgos_iterator_count_id arg) {
   struct mgos_iterator_count *ctx = (struct mgos_iterator_count *)arg;
   mgos_clear_iterator(ctx->iterator);
   delete ctx;
