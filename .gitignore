@@ -1,2 +1,3 @@
-intellij/.idea/**/workspace.xml
+intellij/.idea/workspace.xml
+intellij/out/
 mgos/build
