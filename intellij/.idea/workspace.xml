@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc0ebbd-767c-4d66-acdc-16e30d92f86c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,14 +46,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Display.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Display.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/semicomplete/intellij/Display.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="674">
-              <caret line="43" column="61" lean-forward="false" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
+            <state relative-caret-position="874">
+              <caret line="51" column="8" lean-forward="false" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vcs.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modules.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="misc.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -71,55 +100,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="underlight.iml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="underlight.iml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/underlight.iml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
               <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1850">
-              <caret line="74" column="28" lean-forward="false" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
-              <folding>
-                <marker date="1505855230996" expanded="true" signature="50968:51089" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="50968:51107" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="50968:51120" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="50968:51135" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="50991:51072" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="51170:53707" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="51183:53692" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="51237:51532" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="51256:51517" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="51319:51497" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="51359:51463" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="51380:51441" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="51582:51909" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="51601:51894" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="51696:51874" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="51736:51840" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="51757:51818" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="51960:52225" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="51979:52210" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="52012:52190" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="52052:52156" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="52073:52134" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="52268:52574" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="52287:52559" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="52361:52539" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="52401:52505" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="52422:52483" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="52625:52977" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="52644:52962" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="52725:52942" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="52765:52908" ph="..." />
-                <marker date="1505855230996" expanded="true" signature="52786:52886" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -145,14 +131,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>(</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -172,59 +150,9 @@
         <option value="$PROJECT_DIR$/src/com/semicomplete/intellij/PluginMain.java" />
         <option value="$PROJECT_DIR$/src/com/semicomplete/intellij/DisplayTest.java" />
         <option value="$PROJECT_DIR$/src/com/semicomplete/intellij/Display.java" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
-  </component>
-  <component name="LogFilters">
-    <option name="FILTER_ERRORS" value="false" />
-    <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
-    <option name="CUSTOM_FILTER" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="13" />
-    <option name="y" value="-36" />
-    <option name="width" value="3862" />
-    <option name="height" value="2182" />
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>Android &gt; Lint &gt; Correctness</id>
-          </State>
-          <State>
-            <id>Android Lint for Kotlin</id>
-          </State>
-          <State>
-            <id>Class metricsJava</id>
-          </State>
-          <State>
-            <id>Code style issuesJava</id>
-          </State>
-          <State>
-            <id>Declaration redundancyJava</id>
-          </State>
-          <State>
-            <id>Finalization issuesJava</id>
-          </State>
-          <State>
-            <id>Inheritance issuesJava</id>
-          </State>
-          <State>
-            <id>Java</id>
-          </State>
-          <State>
-            <id>Naming conventionsJava</id>
-          </State>
-        </expanded-state>
-      </profile-state>
-    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -283,17 +211,6 @@
     <property name="create.test.in.the.same.root" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.semicomplete.intellij" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.semicomplete.intellij" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -471,9 +388,6 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9fc0ebbd-767c-4d66-acdc-16e30d92f86c" name="Default" comment="" />
@@ -489,44 +403,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505855250359</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="idea files">
+      <created>1505855255574</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1505855255574</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="DisplayTest_displayCompilationReport - 2017.09.19 at 13h 40m 02s.xml">
-      <configuration name="DisplayTest.displayCompilationReport" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DisplayTest_displayCompilationReport - 2017.09.19 at 13h 41m 10s.xml">
-      <configuration name="DisplayTest.displayCompilationReport" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DisplayTest_displayCompilationReport - 2017.09.19 at 13h 42m 49s.xml">
-      <configuration name="DisplayTest.displayCompilationReport" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DisplayTest_displayCompilationReport - 2017.09.19 at 13h 58m 24s.xml">
-      <configuration name="DisplayTest.displayCompilationReport" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DisplayTest_displayCompilationReport - 2017.09.19 at 13h 59m 53s.xml">
-      <configuration name="DisplayTest.displayCompilationReport" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DisplayTest_displayTest - 2017.09.19 at 12h 51m 01s.xml">
-      <configuration name="DisplayTest.displayTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DisplayTest_displayTest - 2017.09.19 at 12h 51m 33s.xml">
-      <configuration name="DisplayTest.displayTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DisplayTest_displayTest - 2017.09.19 at 12h 53m 27s.xml">
-      <configuration name="DisplayTest.displayTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DisplayTest_displayTest - 2017.09.19 at 12h 53m 54s.xml">
-      <configuration name="DisplayTest.displayTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DisplayTest_displayTest - 2017.09.19 at 12h 55m 32s.xml">
-      <configuration name="DisplayTest.displayTest" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="3862" height="2182" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -540,7 +428,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.106510416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.106510416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -563,7 +451,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Remove unused code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unused code." />
+    <MESSAGE value="idea files" />
+    <option name="LAST_COMMIT_MESSAGE" value="idea files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -613,40 +502,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1750">
           <caret line="70" column="28" lean-forward="false" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
-          <folding>
-            <marker date="1505855230996" expanded="true" signature="50968:51089" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="50968:51107" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="50968:51120" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="50968:51135" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="50991:51072" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51170:53707" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51183:53692" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51237:51532" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51256:51517" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51319:51497" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51359:51463" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51380:51441" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51582:51909" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51601:51894" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51696:51874" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51736:51840" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51757:51818" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51960:52225" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51979:52210" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52012:52190" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52052:52156" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52073:52134" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52268:52574" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52287:52559" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52361:52539" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52401:52505" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52422:52483" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52625:52977" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52644:52962" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52725:52942" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52765:52908" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52786:52886" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -814,47 +670,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/gradle.xml" />
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1850">
-          <caret line="74" column="28" lean-forward="false" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
-          <folding>
-            <marker date="1505855230996" expanded="true" signature="50968:51089" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="50968:51107" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="50968:51120" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="50968:51135" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="50991:51072" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51170:53707" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51183:53692" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51237:51532" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51256:51517" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51319:51497" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51359:51463" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51380:51441" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51582:51909" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51601:51894" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51696:51874" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51736:51840" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51757:51818" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51960:52225" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="51979:52210" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52012:52190" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52052:52156" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52073:52134" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52268:52574" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52287:52559" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52361:52539" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52401:52505" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52422:52483" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52625:52977" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52644:52962" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52725:52942" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52765:52908" ph="..." />
-            <marker date="1505855230996" expanded="true" signature="52786:52886" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/underlight.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -875,100 +690,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/semicomplete/intellij/Display.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="43" column="61" lean-forward="false" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
+        <state relative-caret-position="874">
+          <caret line="51" column="8" lean-forward="false" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>underlight</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>IntelliJ IDEA Community Edition IC-171.4694.70</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="102" column="28" lean-forward="false" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
