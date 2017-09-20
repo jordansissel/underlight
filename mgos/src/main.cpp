@@ -22,6 +22,25 @@ uint32_t Wheel(byte WheelPos) {
   return Color(WheelPos * 3, 255 - WheelPos * 3, 0,0);
 }
 
+void Wheel(byte pos, byte &red, byte &green, byte &blue) {
+  pos = 255 - pos;
+  if(pos < 85) {
+    red = 255 - pos * 3;
+    green = 0;
+    blue = pos * 3;
+  } else if (pos < 170) {
+    pos -= 85;
+    red = 0;
+    green = pos * 3;
+    blue = 255 - pos * 3;
+  } else {
+    pos -= 170;
+    red = pos * 3;
+    green = 255 - pos * 3;
+    blue = 0;
+  }
+}
+
 void rainbow3(void *arg, int round) {
   Adafruit_NeoPixel *strip = static_cast<Adafruit_NeoPixel*>(arg);
   int i;
@@ -100,6 +119,142 @@ static void rpcSetPixelColorMany(struct mg_rpc_request_info *ri, const char *arg
   (void) src; // only used with mqtt
 }
 
+// static unsigned char hex(const char p) {
+//   if (isdigit(p))
+//     return p - '0';
+//   if (isupper(p) && p <= 'F')
+//     return p - 'A';
+//   if (islower(p) && p <= 'f')
+//     return p - 'a';
+//   return -1;
+// }
+
+// static unsigned char hex2c(const char *p) {
+//   return hex(p[0]) << 4 + hex(p[1]);
+// }
+
+struct animation {
+  Adafruit_NeoPixel *strip;
+  const char *animation;
+  int position = 0;
+  int len;
+};
+
+enum AnimationCode : byte {
+  RGBW = 0, // 5 bytes led + each color + white
+  RGB = 1, // 3 bytes led + each color
+  Red = 2, // 1 byte led + red
+  Green = 3, // 1 byte led + green
+  Blue = 4, // 1 byte led + blue
+  Rainbow = 5, // 1 byte led + rainbow
+  Reserved = 6, // Excitement awaits.
+  EndOfPixels = 7,
+};
+
+
+void handle_opcode(AnimationCode opcode, struct animation *sequence, byte &red, byte &green, byte &blue, byte &white) {
+  white = red = green = blue = 0;
+  switch (opcode) {
+  case RGBW:
+    red = sequence->animation[0 + sequence->position];
+    green = sequence->animation[1 + sequence->position];
+    blue = sequence->animation[2 + sequence->position];
+    white = sequence->animation[3 + sequence->position];
+    sequence->position += 4;
+    break;
+  case RGB:
+    red = sequence->animation[0 + sequence->position];
+    green = sequence->animation[1 + sequence->position];
+    blue = sequence->animation[2 + sequence->position];
+    sequence->position += 3;
+    break;
+  case Red:
+    red = sequence->animation[0 + sequence->position];
+    sequence->position += 1;
+    break;
+  case Green:
+    green = sequence->animation[0 + sequence->position];
+    sequence->position += 1;
+    break;
+  case Blue:
+    blue = sequence->animation[0 + sequence->position];
+    sequence->position += 1;
+    break;
+  case Rainbow:
+    Wheel(sequence->animation[0 + sequence->position], red, green, blue);
+    sequence->position += 1;
+    break;
+  case Reserved:
+    LOG(LL_INFO, ("SHOULD NOT GET HERE - RESERVED"));
+    break;
+  case EndOfPixels:
+    LOG(LL_INFO, ("SHOULD NOT GET HERE - END OF PIXELS"));
+    break;
+  }
+}
+
+void animate(void *param) {
+  struct animation *sequence = static_cast<struct animation *>(param);
+  int i = 0;
+
+  // read up to the first time we get 0xFFFFFFFFFF
+  while (sequence->animation != NULL) {
+    byte header = sequence->animation[0 + sequence->position];
+
+    auto opcode = static_cast<AnimationCode>(header >> 5); // upper 3 bits for opcode
+
+    sequence->position++;
+
+    if (opcode == EndOfPixels) {
+      break;
+    }
+
+    byte led = header & 31;  // lower 5 bits for led
+    //LOG(LL_INFO, ("Byte header: %02x - %d - %d", header, led, opcode));
+
+    byte red, green, blue, white;
+    handle_opcode(opcode, sequence, red, green, blue, white);
+    sequence->strip->setPixelColor(led, red, green, blue, white);
+    i++;
+  }
+  //LOG(LL_INFO, ("Rendering %d pixels", i));
+
+  sequence->strip->show();
+  //LOG(LL_INFO, ("Rendering %d pixels done", i));
+}
+
+bool want_animate(void *param) {
+  struct animation *sequence = static_cast<struct animation *>(param);
+  bool want = sequence->position < sequence->len;
+  if (!want) {
+    free((void *) sequence->animation);
+    delete(sequence);
+  }
+  //LOG(LL_INFO, ("want animate: %s", want ? "true" : "false"));
+  return want;
+}
+
+mgos_iterator_id mgos_iterator(int msecs, predicate has_next, timer_callback cb, void *arg);
+
+
+//static void rpcAnimate(struct mg_rpc_request_info *ri, const char *args, const char *src, void *user_data) {
+static void rpcAnimate(struct mg_rpc_request_info *ri, void *cb_arg, struct mg_rpc_frame_info *fi, struct mg_str args) {
+  // hexadecimal encoded: led, red, green, blue, white.
+  // sequence repeated.
+  struct animation *sequence = new struct animation();
+  sequence->strip = static_cast<Adafruit_NeoPixel *>(cb_arg);
+  sequence->animation = (char *) malloc(args.len);
+  sequence->len = args.len;
+  memcpy((char *)sequence->animation, (char *)args.p, args.len);
+  // XXX: must free sequence->animation + sequence
+
+  mgos_iterator(16, want_animate, animate, sequence);
+
+  mg_rpc_send_responsef(ri, "OK");
+
+  (void) fi;
+}
+
 enum mgos_app_init_result mgos_app_init(void) {
   const int count = 33;
   Adafruit_NeoPixel *strip = new Adafruit_NeoPixel(count, 5, NEO_GRBW);
@@ -112,6 +267,7 @@ enum mgos_app_init_result mgos_app_init(void) {
   mg_rpc_add_handler(c, "NeoPixel.SetPixelColor", "{ led: %d, red: %d, green: %d, blue: %d, white %d }", rpcSetPixelColor, strip);
   //mg_rpc_add_handler(c, "NeoPixel.SetPixelColorMany", "{ pixels: %M }", rpcSetPixelColorMany, strip);
   mgos_rpc_add_handler("NeoPixel.SetPixelColorMany", rpcSetPixelColorMany, strip);
+  mg_rpc_add_handler(c, "NeoPixel.Animate", "{}", rpcAnimate, strip);
   
   return MGOS_APP_INIT_SUCCESS;
 }
