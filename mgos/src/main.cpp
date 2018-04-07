@@ -2,6 +2,7 @@
 #include "mgos_gpio.h"
 #include "mgos_wifi.h"
 #include "mgos_rpc.h"
+#include "mgos_mqtt.h"
 #include "Adafruit_Neopixel.h"
 #include "mgos_iterator.h"
 
@@ -56,6 +57,22 @@ void rainbow3(void *arg, int round) {
   strip->show();
   
   (void) round;
+}
+
+void pjmasks(void *arg, int count) {
+  // One of my daughter's requested PJ Masks colors.
+  Adafruit_NeoPixel *strip = static_cast<Adafruit_NeoPixel *>(arg);
+  int i = 0;
+  int range = count / 3;
+  for (i = 0; i < range; i++) {
+    strip->setPixelColor(i, 255, 0, 0, 0);
+  }
+  for (i = range; i < 2 * range; i++) {
+    strip->setPixelColor(i, 0, 255, 0, 0);
+  }
+  for (i = range * 2; i < 3 * range; i++) {
+    strip->setPixelColor(i, 0, 0, 255, 0);
+  }
 }
 
 static int rpcSetPixelColorOne(struct mg_rpc_request_info *ri, Adafruit_NeoPixel *strip, int led, int red, int green, int blue, int white) {
@@ -255,12 +272,38 @@ static void rpcAnimate(struct mg_rpc_request_info *ri, void *cb_arg, struct mg_r
   (void) fi;
 }
 
+static void mqtt_handler(struct mg_connection *c, const char *topic, int topic_len,
+                    const char *msg, int msg_len, void *userdata) {
+  LOG(LL_INFO, ("Got message on topic %.*s: %.*s", topic_len, topic, msg_len, msg));
+  (void) c;
+  (void) userdata;
+}
+
+
 enum mgos_app_init_result mgos_app_init(void) {
   const int count = 33;
   Adafruit_NeoPixel *strip = new Adafruit_NeoPixel(count, 5, NEO_GRBW);
   strip->begin();
 
-  rainbow3(strip, 0);
+  pjmasks(strip, count);
+  // rainbow3(strip, 0);
+  // int i = 0;
+  // for (i = 0; i < count; i += 2) {
+  //   strip->setPixelColor(i, 0, 0, 0, 180);
+  // }
+
+  // GONNA CHRISTMAS UP THE PLACE
+  // for (i = 0; i < count; i += 1) {
+  //   strip->setPixelColor(i, 0, 0, 0, 80);
+  //   if (i & 1) { 
+  //     if (i & 2) {
+  //       strip->setPixelColor(i, 64, 0, 0, 00);
+  //     } else {
+  //       strip->setPixelColor(i, 0, 64, 0, 00);
+  //     }
+  //   }
+  // }
+  strip->show();
 
   struct mg_rpc *c = mgos_rpc_get_global();
   LOG(LL_INFO, ("strip: %p", strip));
@@ -268,6 +311,8 @@ enum mgos_app_init_result mgos_app_init(void) {
   //mg_rpc_add_handler(c, "NeoPixel.SetPixelColorMany", "{ pixels: %M }", rpcSetPixelColorMany, strip);
   mgos_rpc_add_handler("NeoPixel.SetPixelColorMany", rpcSetPixelColorMany, strip);
   mg_rpc_add_handler(c, "NeoPixel.Animate", "{}", rpcAnimate, strip);
+
+  mgos_mqtt_sub("/underlight/#", mqtt_handler, NULL);
   
   return MGOS_APP_INIT_SUCCESS;
 }
